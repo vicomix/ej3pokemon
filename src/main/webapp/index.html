@@ -1,18 +1,15 @@
-<html>
+<html ng-app>
     <head>
         <title>Demo MP</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script
-            src="https://code.jquery.com/jquery-3.2.1.min.js"
-        ></script>
-        <script src="main.js" type="text/javascript"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
     </head>
     <body>
         <div id="demo">
-            <h2>Invocando API Star Wars</h2>
-            <button type="button" onclick="loadWars()">Invocar</button>
+            <h1>Demo angular</h1>
+            <input type="text" ng-model="simpleModel" placeholder="Hola mundo" />
+            <h1>{{simpleModel}}</h1>
         </div>
-        <div id="result"></div>
     </body>
 </html>
