@@ -1,6 +1,10 @@
-angular.module('mpApp.controllers', [])
+/**
+ * Module setter
+ * @type type
+ */
+angular.module('mpApp.controllers', ['mpApp.services'])
 
-/* Driver controller */
+
 .controller('demoController', function($scope) {
     
     $scope.dev =    {};
@@ -32,6 +36,18 @@ angular.module('mpApp.controllers', [])
         $scope.dev = {};
     }
 
-});
+})
+.controller('greetController', function($scope, $log, helloService, rageService) {
+    
+    $scope.doGreet = function(){
+        $log.warn('Buen saludo' + helloService.sayHello($scope.demoName));
+        $log.error('Mal saludo' + rageService.sayHello($scope.demoName));
+        
+        $log.warn('Buena despedida' + helloService.sayGoodBye($scope.demoName));
+        $log.error('Mala despedida' + rageService.sayGoodBye($scope.demoName));
+    }
+
+})
+;
 
 

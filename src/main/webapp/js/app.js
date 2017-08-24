@@ -1,3 +1,8 @@
+/**
+ * Main module setter
+ * @type angular app
+ */
 angular.module('mpApp', [
-  'mpApp.controllers'
+  'mpApp.controllers',
+  'mpApp.services'
 ]);
