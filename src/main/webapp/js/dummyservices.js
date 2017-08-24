@@ -11,4 +11,15 @@ module.service('dummyService', function dummyService(){
     };
 });
 
+function alternativeGreetService () {
+  var alternativeGreetService = {};
+  function greeting (name) {
+    return 'Hola ' + name;
+  }
+  alternativeGreetService.sayHello = function (name) {
+    return greeting(name);
+  };
+  return alternativeGreetService;
+}
 
+module.factory('alternativeGreetService', alternativeGreetService);

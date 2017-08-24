@@ -37,7 +37,7 @@ angular.module('mpApp.controllers', ['mpApp.services'])
     };
 
 })
-.controller('greetController', function($scope, $log, helloService, rageService) {
+.controller('greetController', function($scope, $log, helloService, rageService, alternativeGreetService) {
     
     $scope.doGreet = function(){
         $log.warn('Buen saludo' + helloService.sayHello($scope.demoName));
@@ -46,6 +46,10 @@ angular.module('mpApp.controllers', ['mpApp.services'])
         $log.warn('Buena despedida' + helloService.sayGoodBye($scope.demoName));
         $log.error('Mala despedida' + rageService.sayGoodBye($scope.demoName));
     };
+    
+    $scope.doGreet2 = function(){
+        $log.warn('Buen saludo' + alternativeGreetService.sayHello('Hola alternativo'));
+    }
 
 })
 ;
