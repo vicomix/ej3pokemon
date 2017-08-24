@@ -6,6 +6,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
         <script src="js/app.js"></script>
         <script src="js/services.js"></script>
+        <script src="js/dummyservices.js"></script>
         <script src="js/controllers.js"></script>
         
     </head>
@@ -54,6 +55,11 @@
                 <input type="text" ng-model="demoName" placeholder="Nombre" />
             </div>
             <button type="button" ng-click="doGreet()">Saludar en consola</button>
+        </div>
+        <hr />
+        <div id="demo3" ng-controller="dummyController as dc">
+            <h1>Accion Dummy</h1>
+            <button type="button" ng-click="dc.doDummyFunction()">Realizar acción Dummy</button>
         </div>
     </body>
 </html>

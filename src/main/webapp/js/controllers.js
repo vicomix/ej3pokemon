@@ -13,8 +13,8 @@ angular.module('mpApp.controllers', ['mpApp.services'])
         $scope.dev = {
             name: 'Victor Orozco',
             email: 'vorozco@nabenik.com'
-        }
-    }
+        };
+    };
 })
 .controller('norrisController', function($scope, $log, $http) {
     
@@ -34,7 +34,7 @@ angular.module('mpApp.controllers', ['mpApp.services'])
                 });
          
         $scope.dev = {};
-    }
+    };
 
 })
 .controller('greetController', function($scope, $log, helloService, rageService) {
@@ -45,9 +45,17 @@ angular.module('mpApp.controllers', ['mpApp.services'])
         
         $log.warn('Buena despedida' + helloService.sayGoodBye($scope.demoName));
         $log.error('Mala despedida' + rageService.sayGoodBye($scope.demoName));
-    }
+    };
 
 })
 ;
 
+var module = angular.module('mpApp.controllers');
 
+module.controller('dummyController', function($log, dummyService) {
+    
+    this.doDummyFunction = function(){
+        $log.warn(dummyService.doDummy());
+    };
+
+});
