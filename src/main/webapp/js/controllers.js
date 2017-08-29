@@ -65,3 +65,5 @@ module.controller('dummyController', function($log, dummyService) {
     };
 
 });
+
+module.value('Country', 'Guatemala');
