@@ -2,7 +2,9 @@
  * Module setter
  * @type type
  */
-angular.module('mpApp.controllers', ['mpApp.services'])
+angular.module('mpApp.controllers', 
+['mpApp.services',
+'mpApp.providers'])
 .controller('demoController', function($scope) {
     
     $scope.dev =    {};
@@ -35,7 +37,7 @@ angular.module('mpApp.controllers', ['mpApp.services'])
     };
 
 })
-.controller('greetController', function($scope, $log, helloService, rageService, alternativeGreetService) {
+.controller('greetController', function($scope, $log, helloService, rageService, alternativeGreetService, game) {
     
     $scope.doGreet = function(){
         $log.warn('Buen saludo' + helloService.sayHello($scope.demoName));
@@ -47,7 +49,9 @@ angular.module('mpApp.controllers', ['mpApp.services'])
     
     $scope.doGreet2 = function(){
         $log.warn('Buen saludo' + alternativeGreetService.sayHello('Hola alternativo'));
-    }
+        $log.info(game.phrase);
+        $log.info(game.compare('JavaScript'));
+    };
 
 })
 ;

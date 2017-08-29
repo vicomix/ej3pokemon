@@ -4,5 +4,6 @@
  */
 angular.module('mpApp', [
   'mpApp.controllers',
-  'mpApp.services'
+  'mpApp.services',
+  'mpApp.providers',
 ]);
