@@ -3,8 +3,6 @@
  * @type type
  */
 angular.module('mpApp.controllers', ['mpApp.services'])
-
-
 .controller('demoController', function($scope) {
     
     $scope.dev =    {};
